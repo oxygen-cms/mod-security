@@ -26,7 +26,7 @@ class SecurityController extends BlueprintController {
      * @param BlueprintManager        $manager
      */
     public function __construct(BlueprintManager $manager) {
-        parent::__construct($manager->get('Utilities'));
+        parent::__construct($manager->get('Security'));
     }
 
     /**

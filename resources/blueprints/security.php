@@ -23,8 +23,8 @@ Blueprint::make('Security', function($blueprint) {
     ]);
     $blueprint->makeToolbarItem([
         'action'    => 'getList',
-        'label'     => 'Utilities',
-        'icon'      => 'database',
+        'label'     => 'Security',
+        'icon'      => 'lock',
         'color'     => 'white'
     ]);
 
