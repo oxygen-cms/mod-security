@@ -15,7 +15,7 @@ Blueprint::make('Security', function($blueprint) {
     $blueprint->setDisplayName('Security', Blueprint::PLURAL);
     $blueprint->setIcon('lock');
 
-    $blueprint->setDefaultToolbarItem('getList');
+    $blueprint->setPrimaryToolbarItem('getList');
 
     $blueprint->makeAction([
         'name'        => 'getList',

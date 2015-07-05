@@ -1,6 +1,6 @@
 <?php
 
-namespace OxygenModule\Auth;
+namespace OxygenModule\Security;
 
 use Oxygen\Core\Blueprint\BlueprintManager;
 use Oxygen\Core\Html\Navigation\Navigation;
@@ -8,7 +8,7 @@ use Oxygen\Data\BaseServiceProvider;
 use Oxygen\Preferences\PreferencesManager;
 use Oxygen\Preferences\Transformer\JavascriptTransformer;
 
-class AuthServiceProvider extends BaseServiceProvider {
+class SecurityServiceProvider extends BaseServiceProvider {
 
 	/**
 	 * Indicates if loading of the provider is deferred.
