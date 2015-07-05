@@ -8,7 +8,7 @@
 
     $header = Header::fromBlueprint(
         $blueprint,
-        Lang::get('oxygen/mod-security::title')
+        Lang::get('oxygen/mod-security::ui.title')
     );
 
 ?>

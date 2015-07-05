@@ -11,7 +11,6 @@ use Oxygen\Data\Behaviour\PrimaryKey;
  * @ORM\Entity
  * @ORM\Table(name="login_log")
  */
-
 class LoginLog {
 
     use PrimaryKey, Accessors;

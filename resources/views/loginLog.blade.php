@@ -9,7 +9,7 @@
 
     $header = Header::fromBlueprint(
         $blueprint,
-        Lang::get('oxygen/mod-security::loginLog.title')
+        Lang::get('oxygen/mod-security::ui.loginLog.title')
     );
 
     $header->setBackLink(URL::route($blueprint->getRouteName('getList')));
