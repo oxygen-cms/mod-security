@@ -24,7 +24,7 @@
     ?>
         <div class="Row--visual">
             <h2 class="heading-gamma">Login Log</h2>
-            {{ $toolbarItem->render(['margin' => 'vertical']) }}
+            {!! $toolbarItem->render(['margin' => 'vertical']) !!}
             <p>
                 Whenever users login to Oxygen, their IP address will be logged in this log. You can view this log to check for unusual login attempts.
             </p>
