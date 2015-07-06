@@ -4,7 +4,7 @@ use OxygenModule\Security\Controller\SecurityController;
 
 Blueprint::make('Security', function($blueprint) {
     $blueprint->setController(SecurityController::class);
-    $blueprint->setBothDisplayNames('Security');
+    $blueprint->disablePluralForm();
     $blueprint->setIcon('lock');
 
     $blueprint->setPrimaryToolbarItem('getList');
