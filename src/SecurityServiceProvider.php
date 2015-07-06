@@ -24,7 +24,6 @@ class SecurityServiceProvider extends BaseServiceProvider {
 	public function boot() {
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'oxygen/mod-security');
         $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'oxygen/mod-security');
-        $this->loadEntitiesFrom(__DIR__ . '/Entity');
 
         $this->publishes([
             __DIR__ . '/../resources/lang' => base_path('resources/lang/vendor/oxygen/mod-security'),
@@ -45,6 +44,7 @@ class SecurityServiceProvider extends BaseServiceProvider {
 	 */
 
 	public function register() {
+        $this->loadEntitiesFrom(__DIR__ . '/Entity');
         $this->app->bind(LoginLogRepositoryInterface::class, DoctrineLoginLogRepository::class);
     }
 
