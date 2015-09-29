@@ -6,12 +6,13 @@ use DateTime;
 use Doctrine\ORM\Mapping AS ORM;
 use Oxygen\Data\Behaviour\Accessors;
 use Oxygen\Data\Behaviour\PrimaryKey;
+use Oxygen\Data\Behaviour\PrimaryKeyInterface;
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="login_log")
  */
-class LoginLog {
+class LoginLog implements PrimaryKeyInterface {
 
     use PrimaryKey, Accessors;
 
