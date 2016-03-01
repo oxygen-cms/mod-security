@@ -66,7 +66,7 @@ class SecurityController extends BlueprintController {
         $client = new Client();
         try {
             $data = $client->get(
-                'http://www.telize.com/geoip/' . $item->getIpAddress()
+                'https://freegeoip.net/json/' . $item->getIpAddress()
             )->json();
         } catch(RequestException $e) {
             return Response::notification(new Notification(
@@ -75,14 +75,17 @@ class SecurityController extends BlueprintController {
             ));
         }
 
-        if(!isset($data['country']) || !isset($data['region']) || !isset($data['city'])) {
+        if(!isset($data['country_name']) || !isset($data['region_name']) || !isset($data['city'])) {
             return Response::notification(new Notification(
                 Lang::get('oxygen/mod-security::messages.loginLog.loginLocationFailed'),
                 Notification::FAILED
             ));
         } else {
             return Response::notification(new Notification(
-                Lang::get('oxygen/mod-security::messages.loginLog.loginLocation', $data)
+                Lang::get(
+                    'oxygen/mod-security::messages.loginLog.loginLocation',
+                    ['country' => $data['country_name'], 'region' => $data['region_name'], 'city' => $data['city']]
+                )
             ));
         }
     }
